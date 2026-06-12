@@ -1,0 +1,20 @@
+[
+  {
+    "id": "task-1",
+    "userId": "demo-user",
+    "title": "Complete HTML practice",
+    "dueDate": "2026-06-15",
+    "priority": "High",
+    "completed": false,
+    "createdAt": "2026-06-12T00:00:00.000Z"
+  },
+  {
+    "id": "task-2",
+    "userId": "demo-user",
+    "title": "Revise JavaScript basics",
+    "dueDate": "2026-06-16",
+    "priority": "Medium",
+    "completed": true,
+    "createdAt": "2026-06-12T00:00:00.000Z"
+  }
+]

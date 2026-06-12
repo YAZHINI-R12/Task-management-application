@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="auth-panel" id="authPanel">
+      <div class="brand">
+        <span class="brand-mark">TF</span>
+        <div>
+          <h1>TaskFlow</h1>
+          <p>Plan, track, and finish your daily study tasks.</p>
+        </div>
+      </div>
+
+      <div class="welcome-card">
+        <div>
+          <p class="eyebrow">Student Productivity</p>
+          <h2>Turn your daily goals into finished tasks.</h2>
+          <p>Login, add your study work, set priority, and track what is done.</p>
+        </div>
+        <div class="mini-board" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="auth-grid">
+        <form id="loginForm" class="auth-card">
+          <h2>Login</h2>
+          <input type="email" id="loginEmail" placeholder="Email" value="student@example.com">
+          <input type="password" id="loginPassword" placeholder="Password" value="123456">
+          <button type="submit">Login</button>
+          <p class="hint">Demo: student@example.com / 123456</p>
+        </form>
+
+        <form id="registerForm" class="auth-card">
+          <h2>Register</h2>
+          <input type="text" id="registerName" placeholder="Name">
+          <input type="email" id="registerEmail" placeholder="Email">
+          <input type="password" id="registerPassword" placeholder="Password">
+          <button type="submit">Create Account</button>
+        </form>
+      </div>
+      <p id="authMessage" class="message"></p>
+    </section>
+
+    <section class="dashboard hidden" id="dashboard">
+      <aside class="sidebar">
+        <div class="brand compact">
+          <span class="brand-mark">TF</span>
+          <div>
+            <h1>TaskFlow</h1>
+            <p id="userName">Student</p>
+          </div>
+        </div>
+
+        <div class="summary">
+          <article class="summary-total">
+            <strong id="totalTasks">0</strong>
+            <span>Total</span>
+          </article>
+          <article class="summary-done">
+            <strong id="completedTasks">0</strong>
+            <span>Done</span>
+          </article>
+          <article class="summary-pending">
+            <strong id="pendingTasks">0</strong>
+            <span>Pending</span>
+          </article>
+        </div>
+
+        <button id="logoutButton" class="ghost-button">Logout</button>
+      </aside>
+
+      <section class="task-area">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow">My Tasks</p>
+            <h2>Today&apos;s Task Board</h2>
+          </div>
+          <select id="filterSelect">
+            <option value="all">All tasks</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <form id="taskForm" class="task-form">
+          <input type="text" id="taskTitle" placeholder="Enter a task">
+          <input type="date" id="taskDueDate">
+          <select id="taskPriority">
+            <option>High</option>
+            <option selected>Medium</option>
+            <option>Low</option>
+          </select>
+          <button type="submit">Add Task</button>
+        </form>
+
+        <div id="taskList" class="task-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
